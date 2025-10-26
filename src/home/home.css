@@ -1,0 +1,145 @@
+.home-root {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically (use flex-start if you want top) */
+  padding: 2rem;
+  box-sizing: border-box;
+
+  background-image: url("./assets/Background.png"); /* confirm exact filename/case */
+  background-size: cover; /* cover whole viewport */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background {
+  background-image: url("./assets/Background.png");
+  background-size: cover;
+}
+
+.plots {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.logo {
+  width: 350px;
+  height: 350px;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.coin {
+  position: fixed;
+  height: 3em;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+}
+
+.coin-count {
+  position: fixed;
+  top: 20px;
+  right: 60px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 4px #000000aa;
+  z-index: 50;
+}
+
+.dirt {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.dirt:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.dirt.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.apple {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.apple:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.apple.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.sprout {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.sprout {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.sprout.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.task-list {
+  width: 100%;
+  max-width: 680px;
+  margin: 18px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+}
