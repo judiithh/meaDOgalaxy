@@ -1,0 +1,40 @@
+.celebrate-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform-origin: center;
+  opacity: 0;
+  animation: shoot var(--dur, 1400ms) cubic-bezier(0.22, 0.9, 0.3, 1)
+    var(--delay, 0ms) both;
+}
+
+/* animation moves element from center outward using the custom properties */
+@keyframes shoot {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%)
+      translate(calc(var(--tx) * 0.7), calc(var(--ty) * 0.7))
+      rotate(calc(var(--rot) * 0.7));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--tx), var(--ty))
+      rotate(calc(var(--rot) + 360deg));
+    opacity: 0;
+  }
+}

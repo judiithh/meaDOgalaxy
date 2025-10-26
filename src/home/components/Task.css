@@ -1,0 +1,110 @@
+/* compact, centered card look for each task */
+.task-row {
+  width: 100%;
+  max-width: 520px;
+  margin: 8px auto;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(110, 105, 105, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 160ms ease, background 160ms ease;
+}
+.task-row:hover {
+  transform: translateY(-4px);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #6bd36b;
+}
+
+/* task name */
+.task-name {
+  font-size: 1rem;
+  color: #ffffff;
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.task-row.complete .task-name {
+  color: #d6ffd6;
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+/* actions */
+.task-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.task-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 100ms ease, opacity 100ms ease;
+}
+.task-btn.delete {
+  background: rgba(255, 80, 80, 0.12);
+  color: #ffb4b4;
+  border: 1px solid rgba(255, 80, 80, 0.14);
+}
+.task-btn.collect {
+  background: rgba(100, 220, 120, 0.12);
+  color: #9fffa1;
+  border: 1px solid rgba(100, 220, 120, 0.14);
+}
+.task-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.98;
+}
+
+/* responsive */
+@media (max-width: 520px) {
+  .task-row {
+    padding: 10px;
+    gap: 8px;
+  }
+  .task-name {
+    max-width: 180px;
+    font-size: 0.95rem;
+  }
+}
+
+.controls input,
+.controls .task-input {
+  width: 400px;
+  max-width: 90%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: border-color 150ms ease, transform 120ms ease;
+}
+
+.controls input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.controls input:focus,
+.controls input.task-input:focus {
+  border-color: drop-shadow(0 0 2em #646cffaa);
+  transform: translateY(-2px);
+}
