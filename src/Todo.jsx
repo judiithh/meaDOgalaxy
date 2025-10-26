@@ -4,11 +4,11 @@ import logo from './logo.svg'
 import './App.css'
 */
 
-import workBtnClicked from "./assets/work-clicked.png";
-import breakBtn from "./assets/break.png";
-import workGif from "./assets/work.gif";
-import breakGif from "./assets/break.gif";
-import background from './assets/Rowdyhacks Website.png';
+// import workBtnClicked from "./assets/work-clicked.png";
+// import breakBtn from "./assets/break.png";
+// import workGif from "./assets/work.gif";
+// import breakGif from "./assets/break.gif";
+// import background from './assets/Rowdyhacks Website.png';
 import cowboyCorgi from "./assets/CowboyCorgi.png";
 
 function Todo() {
